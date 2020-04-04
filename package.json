@@ -1,0 +1,27 @@
+{
+  "name": "schematic-hello-world",
+  "version": "0.0.0",
+  "description": "A blank schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "run:hw:dry": "npm run build && schematics .:schematic-hello-world --name='Angular Community' --dry-run",
+    "run:hw": "npm run build && schematics .:schematic-hello-world --name='Angular Community' --dry-run=false",
+    "test": "npm run build && jasmine src/**/*_spec.js"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^9.1.0",
+    "@angular-devkit/schematics": "^9.1.0",
+    "typescript": "~3.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.5.0",
+    "jasmine": "^3.5.0"
+  }
+}
